@@ -1,0 +1,103 @@
+
+<!-- HTML from ARRPaladinForm -->
+<form method="POST">
+    {{ form.hidden_tag() }}
+    
+    <h3><a href="https://ffxiv.consolegameswiki.com/wiki/Relic_Weapons/Quest">Section 1: Relic</a></h3>
+    <h5>A Relic Reborn</h5>
+    <p>Part 1: Timeworn Weapon</p>
+    <p>Locate the <a href="https://ffxiv.gamerescape.com/wiki/Timeworn_Curtana">Timeworn Curtana</a> in Southern Thanalan - Zahar'ak - x:32 y:18</p>
+    <fieldset id="timeworn-field">
+        {{ form.timeworn.label(class='form-label') }}
+        {{ form.timeworn(class='form-check', value=weapon.timeworn) }}
+    </fieldset>
+
+    <p>Part 2: Melded Weapon</p>
+    <p>Obtain the Aeolian Scimitar</p>
+    <fieldset id="mat_weapon-field">
+        {{ form.mat_weapon.label(class='form-label') }}
+        {{ form.mat_weapon(class='form-check') }}
+    </fieldset>
+    <p>Obtain two (2) Battledance Materia III and meld them to the Aeolian Scimitar</p>
+    <fieldset id="materia-field">
+        {{ form.materia.label(class='form-label') }}
+        {{ form.materia(class='form-check') }}
+    </fieldset>
+
+    <p>Part 3: Trial - Chimera</p>
+    <p>Defeat the Dhorme Chimera obtain the Alumina Salts</p>
+    <a href="https://ffxiv.consolegameswiki.com/wiki/A_Relic_Reborn:_The_Chimera">A Relic Reborn: The Chimera</a>
+    <fieldset id="chimera-field">
+        {{ form.chimera.label(class='form-label') }}
+        {{ form.chimera(class='form-check') }}
+    </fieldset>
+
+    <p>Part 4: Dungeon - Amdapor Keep</p>
+    <p>Clear <a href="https://ffxiv.consolegameswiki.com/wiki/Amdapor_Keep">Amdapor Keep</a> and obtain Amdapor Glyph</p>
+    <fieldset id="amdapor-field">
+        {{ form.amdapor.label(class='form-label') }}
+        {{ form.amdapor(class='form-check') }}
+    </fieldset>
+
+    <p>Part 5: Beastmen</p>
+    <p>Equip the unfinished Curtana and hunt down eight (8) of each:</p>
+    <p><a href="https://ffxiv.consolegameswiki.com/wiki/Zahar%27ak_Lancer">Zahar'ak Lancer</a> - Southern Thanalan x:27 y:20</p>
+    <fieldset id="beastmen1-field">
+        {{ form.beastmen1.label(class='form-label') }}
+        {{ form.beastmen1(class='form-check') }}
+    </fieldset>
+    <p><a href="https://ffxiv.consolegameswiki.com/wiki/Zahar%27ak_Pugilist">Zahar'ak Pugilist</a> - Southern Thanalan x:23 y:21</p>
+    <fieldset id="beastmen2-field">
+        {{ form.beastmen2.label(class='form-label') }}
+        {{ form.beastmen2(class='form-check') }}
+    </fieldset>
+    <p><a href="https://ffxiv.consolegameswiki.com/wiki/Zahar%27ak_Thaumaturge">Zahar'ak Thaumaturge</a> - Southern Thanalan x:29 y:19</p>
+    <fieldset id="beastmen3-field">
+        {{ form.beastmen3.label(class='form-label') }}
+        {{ form.beastmen3(class='form-check') }}
+    </fieldset>
+
+    <p>Part 6: Trial - Hydra</p>
+    <p>Defeat the Hydra</p>
+    <a href="https://ffxiv.consolegameswiki.com/wiki/A_Relic_Reborn:_The_Hydra">A Relic Reborn: The Hydra</a>
+    <fieldset id="hydra-field">
+        {{ form.hydra.label(class='form-label') }}
+        {{ form.hydra(class='form-check') }}
+    </fieldset>
+
+    <p>Part 7: Trial - Ifrit</p>
+    <p>Defeat Ifrit and obtain White-Hot Ember</p>
+    <a href="https://ffxiv.consolegameswiki.com/wiki/The_Bowl_of_Embers_(Hard)">The Bowl of Embers (Hard)</a>
+    <fieldset id="ifrit-field">
+        {{ form.ifrit.label(class='form-label') }}
+        {{ form.ifrit(class='form-check') }}
+    </fieldset>
+
+    <p>Part 8: Trial - Garuda</p>
+    <p>Defeat Garuda and obtain Howling Gale</p>
+    <a href="https://ffxiv.consolegameswiki.com/wiki/The_Howling_Eye_(Hard)">The Howling Eye (Hard)</a>
+    <fieldset id="garuda-field">
+        {{ form.garuda.label(class='form-label') }}
+        {{ form.garuda(class='form-check') }}
+    </fieldset>
+
+    <p>Part 9: Trial - Titan</p>
+    <p>Defeat Titan and obtain Hyperfused Ore</p>
+    <a href="https://ffxiv.consolegameswiki.com/wiki/The_Navel_(Hard)">The Navel (Hard)</a>
+    <fieldset id="titan-field">
+        {{ form.titan.label(class='form-label') }}
+        {{ form.titan(class='form-check') }}
+    </fieldset>
+
+    <p>Part 10: Radz-at-Han Quenching Oil</p>
+    <p>Purchase one (1) Radz-at-Han Quenching Oil for 15 Allagan Tomestones of Poetics from <a href="https://ffxiv.consolegameswiki.com/wiki/Auriana">Auriana</a> in Mor Dhona</p>
+    <a href="https://ffxiv.consolegameswiki.com/wiki/The_Navel_(Hard)">The Navel (Hard)</a>
+    <fieldset id="oil-field">
+        {{ form.oil.label(class='form-label') }}
+        {{ form.oil(class='form-check') }}
+    </fieldset>
+
+    <!-- Update Button -->
+    {{ form.update(class='btn btn-warning') }}
+</form>
+

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+<!-- Profile Page Content -->
+{% block content %}
+
+<div class="profile-cont">
+    <h3>Welcome, Adventurer!</h3>
+    <div class="profile-info">
+        <h5>Email: {{ current_user.email }}</h5>
+        <h5>Token: {{ current_user.token }}</h5>
+        <!-- TODO Add access key -->
+    </div>
+</div>
+
+<div class="hero-section">
+    <img src="../../static/images/profile_banner.jpg" alt="profile-banner">
+</div>
+
+{% endblock content %}

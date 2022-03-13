@@ -1,0 +1,22 @@
+
+<!-- HTML from UpdateCharacterForm -->
+<form action="/update/{{ character.id }}" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="name-field">
+            {{ form.name.label(class='form-label') }}
+            {{ form.name(class='form-control', value=character.name) }}
+        </fieldset>
+        <fieldset id="race-field">
+            {{ form.race.label(class='form-label') }}
+            {{ form.race(class='choice-form') }}
+        </fieldset>
+        <fieldset id="gender-field">
+            {{ form.gender.label(class='form-label') }}
+            {{ form.gender(class='choice-form') }}
+        </fieldset>
+
+        <!-- Update Button -->
+        {{ form.update(class='btn btn-warning') }}
+    </div>
+</form>

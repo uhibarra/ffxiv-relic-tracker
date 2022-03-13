@@ -1,0 +1,13 @@
+
+<!-- HTML from ARRNewRelicForm -->
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="job-field">
+            {{ form.job.label(class='form-label') }}
+            {{ form.job(class='choice-form') }}
+        </fieldset>
+        <!-- Submit Button -->
+        {{ form.submit(class='btn btn-warning') }}
+    </div>
+</form>

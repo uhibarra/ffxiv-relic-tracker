@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+<!-- Create Page Content -->
+{% block content %}
+
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories = True) %}
+        {% if messages %}
+            {% for cat,msg in messages %}
+                {% if cat == 'character-updated' %}
+                    <div class="alert alert-success">
+                        {{ msg }}
+                    </div>
+                {% endif %}
+                {% if cat == 'character-created' %}
+                    <div class="alert alert-success">
+                        {{ msg }}
+                    </div>
+                {% endif %}
+                {% if cat == 'char-deleted' %}
+                    <div class="alert alert-info">
+                        {{ msg }}
+                    </div>
+                {% endif %}
+                {% if cat == 'delete-failed' %}
+                    <div class="alert alert-danger">
+                        {{ msg }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h2>Characters</h2>
+        </div>
+    </div>
+</div>
+
+<main class="container">
+    <div class="row">
+        <div class="col-6 col-md-6">
+            {% for character in characters %}
+                <br/>
+                Name: {{ character.name }}
+                <br/>
+                Race: {{ character.race }}
+                <br/>
+                Gender: {{ character.gender }}
+
+                <ul id="button-list">
+                    <a href="{{ url_for('site.arr', id=character.id) }}">
+                        <li>ARR</li>
+                    </a>
+                    <a href="#">
+                        <li>HW</li>
+                    </a>
+                    <a href="#">
+                        <li>SB</li>
+                    </a>
+                    <a href="#">
+                        <li>SHB</li>
+                    </a>
+                </ul>
+
+                <ul id="button-list">
+                    <a href="{{ url_for('site.delete', id=character.id) }}">
+                        <li>Delete</li>
+                    </a>
+                    <a href="{{ url_for('site.update', id=character.id) }}">
+                        <li>Update</li>
+                    </a>
+                </ul>
+
+            {% endfor %}
+        </div>
+
+    </div>
+</main>
+
+{% endblock content %}
+
+<!-- {{ url_for('delete', id=character.id) }} -->

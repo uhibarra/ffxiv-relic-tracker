@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Colors */
+/* Dark-Blu-Grn: #19242c */
+/* For Gradient (Light): #bda43e */
+/* Text: #f3d24e */
+/* Hover: white */
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #19242c;
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #f3d24e;
+}
+
+a {
+    color: #f39e4e;
+}
+
+
+/* Navbar */
+.ct-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#ff14-meteor {
+    width: 20%;
+    max-width: 100%;
+    margin-left: 3vw;
+}
+
+ul#horizontal-list {
+    margin-right: 4.5vw;
+    list-style: none;
+    margin-top: 3vw;
+}
+
+ul#horizontal-list li, ul#horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw 0.6vw;
+    color: #f3d24e;
+}
+
+#special-button {
+    border: 1px solid #f3d24e;
+    border-radius: 8px;
+}
+/* End Navbar */
+
+/* Home Page */
+#header-text {
+    text-align: center;
+    padding: 5vh;
+}
+
+.header-image {
+    width: 82%;
+    max-width: 100%;
+}
+
+#middle-text {
+    text-align: center;
+    padding: 5vh;
+}
+
+#middle-text h3 {
+    padding: 0.5vw;
+}
+/* End Home Page */
+
+/* Profile Page */
+.hero-section img {
+    display: block;
+    margin: 2% auto;
+    width: 53%;
+    /* background-size: cover; */
+    /* background-position: 50% 35%; */
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #bda43e);
+    mask-image: linear-gradient(to bottom, transparent, #bda43e);
+}
+
+.profile-cont {
+    text-align: center;
+}
+
+.profile-info {
+    text-align: center;
+}
+/* End Profile Page */
+
+/* Forms */
+.form-control {
+    margin-bottom: 10px;
+}
+
+.choice-form {
+    margin: 10px 0;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+#form-submit-button {
+    content: 'Submit';
+}
+/* End Forms */
+
+/* Character Page */
+#button-list {
+    margin: 8px 0;
+}
+
+#button-list a {
+    margin: 2px 2px;
+}
+
+#button-list li {
+    display: inline;
+    color: #f3d24e;
+    border: 1px solid #f3d24e;
+    border-radius: 5px;
+    padding: 3px 4px;
+    text-decoration: none;
+}
+
+#del-button {
+    display: inline;
+    color: rgb(105, 4, 4);
+    border: 1px solid rgb(105, 4, 4);
+    border-radius: 5px;
+    padding: 3px 4px;
+    text-decoration: none;
+}
+/* End Character Page */
